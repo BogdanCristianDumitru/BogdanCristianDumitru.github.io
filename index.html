@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bogdan D's Portofolio Web Site</title>
+    <title>Bogdan Dumitru</title>
 
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <span>Bogdan Dumitru</span>
+        <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-label="Navigation Menu" aria-controls="mobileNav">
+            <svg id="openIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </button>
+        <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+          <ul>  
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>  
+        </nav>
+        
+        <nav class="desktop-nav">
+          <ul> 
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-container">
+            <img class="hero-img" src="images/new_profile_pic.jpg" alt="Picture of Bogdan Dumitru">
+            <div class="hero-text-container">
+                <h1>Bogdan Dumitru</h1>
+                <p>Front-End Web Developer</p>
+                <p>Gainesville, Florida</p>
+                <a href="#projects" class="btn">Check out my work</a>
+            </div>
+        </section>
+
+
+    </main>
     
+
+
+
+    <script src="js/app.js"></script>
 </body>
 </html>
