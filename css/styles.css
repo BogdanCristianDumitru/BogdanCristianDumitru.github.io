@@ -242,15 +242,12 @@ header {
 }
 
 .project-container .project-links {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
-.project-img {
-    width: 260px;
-    height: 260px;
-    margin: auto;
-    background-color: teal;
-    margin-bottom: 1rem;
+.project-container img {
+    width: 265px;
+    height: 265px;
 }
 
 .all-projects-container h3 {
@@ -274,6 +271,7 @@ header {
 
 .project-links .btn {
     background-color: #CC7700;
+    padding: 4px 14px;
     border: 2px solid #CC7700;
     box-shadow: 0 2px #723808;
     font-size: 1rem;
@@ -379,6 +377,10 @@ footer {
     .all-projects-container h2 {
         margin-bottom: 2rem;
     }
+
+    .all-projects-container h3 {
+        font-size: 1.4rem;
+    }
     
     #search-input {
         width: 60%;
@@ -398,8 +400,10 @@ footer {
     .project-container {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 2rem;
         text-align: center;
+        margin-bottom: 2.5rem;
       }
     
       .project-img-container,
@@ -411,10 +415,15 @@ footer {
         flex-direction: row-reverse;
       }
 
-      .project-img {
-        width: 90%;
-        margin: auto;
-      }
+      .project-container img {
+        width: 340px;
+        height: 340px;
+        margin-bottom: 1rem;
+    }
+
+    .project-links a:first-of-type {
+        margin-right: 10px;
+    }
 
       .socials-container {
         gap: 2rem;
