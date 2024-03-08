@@ -4,6 +4,11 @@ const closeIcon = document.querySelector("#closeIcon");
 const mobileNav = document.querySelector("#mobileNav");
 const mobileLinks = mobileNav.querySelectorAll("a");
 
+const searchInput = document.getElementById('search-input');
+const projectContainers = document.querySelectorAll('.project-container');
+
+
+
 function toggleMenu() {
     const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
 
@@ -35,6 +40,36 @@ mobileLinks.forEach(link => {
 });
 
 
-   
+// Event Listener for Search Function
+searchInput.addEventListener('keyup', () => {
+    const searchText = searchInput.value.toLowerCase();
+    const screenWidth = window.innerWidth;
+
+    projectContainers.forEach(project => {
+        const techStacks = project.querySelectorAll('.project-techs span');
+        let matchFound = false;
+
+        techStacks.forEach(span => {
+            const spanText = span.textContent.toLowerCase();
+            if (spanText.includes(searchText)) {
+                matchFound = true;
+            }
+        });
+
+        if (matchFound && screenWidth < 768) {
+            project.style.display = 'block';
+        } else if (matchFound && screenWidth > 768) {
+            project.style.display = 'flex'
+        } else {
+            project.style.display = 'none';
+        } 
+    });
+
+        if (searchText === "") {
+            location.reload();
+        }
+});
 
 
+
+       
