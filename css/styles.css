@@ -58,10 +58,13 @@ a {
   }
 
   hr {
+    margin-bottom: 2.5rem;
+    opacity: .5;
+  }
+  .separate-projects {
     width: 90%;
     margin: auto;
-    margin-bottom: 2rem;
-    opacity: .5;
+    margin-bottom: 2.5rem;
   }
 
   section {
@@ -132,7 +135,7 @@ header {
   margin: auto;
   background-color: #1F473E;
   padding-top: 2rem;
-  transform: translateX(-120%);
+  transform: translateX(-180%);
   transition: transform .4s ease;
 }
 

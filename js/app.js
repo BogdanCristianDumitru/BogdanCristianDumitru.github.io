@@ -3,12 +3,12 @@ const openIcon = document.querySelector("#openIcon");
 const closeIcon = document.querySelector("#closeIcon");
 const mobileNav = document.querySelector("#mobileNav");
 const mobileLinks = mobileNav.querySelectorAll("a");
-
+const separateProjects = document.querySelectorAll('.separate-projects');
 const searchInput = document.getElementById('search-input');
 const projectContainers = document.querySelectorAll('.project-container');
 
 
-
+// TOGGLE MENU
 function toggleMenu() {
     const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
 
@@ -39,9 +39,9 @@ mobileLinks.forEach(link => {
     });
 });
 
-
-// Event Listener for Search Function
-searchInput.addEventListener('keyup', () => {
+// FUNCTIONS
+// Search function 
+function searchProject() {
     const searchText = searchInput.value.toLowerCase();
     const screenWidth = window.innerWidth;
 
@@ -59,15 +59,30 @@ searchInput.addEventListener('keyup', () => {
         if (matchFound && screenWidth < 768) {
             project.style.display = 'block';
         } else if (matchFound && screenWidth > 768) {
-            project.style.display = 'flex'
-        } else {
+            project.style.display = 'flex';
+        }  else {
             project.style.display = 'none';
         } 
+
+        separateProjects.forEach(hr => {
+            if(matchFound) {
+                hr.style.display = 'none';
+            } else if (!matchFound) {
+                hr.style.display = 'none';
+            } else {
+                hr.style.display = 'block';
+            }
+        });
     });
 
         if (searchText === "") {
             location.reload();
         }
+}
+
+// Event Listener for Search Function
+searchInput.addEventListener('keyup', () => {
+    searchProject();
 });
 
 
