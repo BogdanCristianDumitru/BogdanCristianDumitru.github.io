@@ -58,9 +58,9 @@ function searchProject() {
         }  else {
             project.style.display = 'none';
         } 
-
-      separateProjects();
     });
+
+    separateProjects();
 
         if (searchText === "") {
             location.reload();
