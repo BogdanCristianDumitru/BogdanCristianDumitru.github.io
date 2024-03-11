@@ -3,12 +3,12 @@ const openIcon = document.querySelector("#openIcon");
 const closeIcon = document.querySelector("#closeIcon");
 const mobileNav = document.querySelector("#mobileNav");
 const mobileLinks = mobileNav.querySelectorAll("a");
-const separateProjects = document.querySelectorAll('.separate-projects');
+
 const searchInput = document.getElementById('search-input');
 const projectContainers = document.querySelectorAll('.project-container');
 
-
-// TOGGLE MENU
+// FUNCTIONS
+// Toggle Menu
 function toggleMenu() {
     const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
 
@@ -27,10 +27,6 @@ function toggleMenu() {
     }
 }
 
-menuBtn.addEventListener('click', () => {
-    toggleMenu();
-});
-
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (mobileNav.classList.contains("open")) {
@@ -39,7 +35,6 @@ mobileLinks.forEach(link => {
     });
 });
 
-// FUNCTIONS
 // Search function 
 function searchProject() {
     const searchText = searchInput.value.toLowerCase();
@@ -64,15 +59,7 @@ function searchProject() {
             project.style.display = 'none';
         } 
 
-        separateProjects.forEach(hr => {
-            if(matchFound) {
-                hr.style.display = 'none';
-            } else if (!matchFound) {
-                hr.style.display = 'none';
-            } else {
-                hr.style.display = 'block';
-            }
-        });
+      separateProjects();
     });
 
         if (searchText === "") {
@@ -80,10 +67,32 @@ function searchProject() {
         }
 }
 
-// Event Listener for Search Function
+// Separate projects function
+function separateProjects(matchFound) {
+    const delineatingLines = document.querySelectorAll('.separate-projects');
+
+    delineatingLines.forEach(hr => {
+        if(matchFound) {
+            hr.style.display = 'none';
+        } else if (!matchFound) {
+            hr.style.display = 'none';
+        } else {
+            hr.style.display = 'block';
+        }
+      });
+}
+
+// EVENT LISTENERS
+// For Toggle Menu
+menuBtn.addEventListener('click', () => {
+    toggleMenu();
+});
+
+//For Search Function
 searchInput.addEventListener('keyup', () => {
     searchProject();
 });
+
 
 
 
