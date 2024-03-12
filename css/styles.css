@@ -5,27 +5,6 @@
     padding: 0;
   }
 
-  /* Global CSS Variables */
-:root {
-    /*
-    --body-bg: #fef2dc;
-    --header-text: #fef7e9;
-    --body-text: #050505;
-    --headings: #b65949;
-    --primary: #006361;
-    --primary-shadow: #0d4645;
-    --secondary: #d8a25a;
-    --secondary-shadow: #ab8147;
-    --white: #ffffff;
-  
-    font-family: "Young Serif", serif;
-    */
-
-    scroll-behavior: smooth;
-
-    text-align: center;
-  }
-
 #closeIcon,
 /*#mobileNav*/
 .desktop-nav {
@@ -37,7 +16,12 @@ body {
     max-width: 1100px;
     margin: auto;
     background: #DCE5E2;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;  
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 main,
