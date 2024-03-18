@@ -393,7 +393,8 @@ footer {
         font-size: .9rem;
     }
 
-    .flex-img-and-text {
+    .flex-img-and-text,
+    .flex-img-and-text-reverse  {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -401,14 +402,14 @@ footer {
         text-align: center;
         margin-bottom: 2.5rem;
     }
+
+    .flex-img-and-text-reverse {
+        flex-direction: row-reverse;
+    }
     
       .project-img-container,
       .project-text-container {
         flex-basis: 50%;
-      }
-    
-      .project-container:nth-of-type(even) {
-        flex-direction: row-reverse;
       }
 
       .project-container img {
