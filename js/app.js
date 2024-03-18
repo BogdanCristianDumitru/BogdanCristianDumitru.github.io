@@ -51,35 +51,12 @@ function searchProject() {
             }
         });
 
-        if (matchFound && screenWidth < 768) {
+        if (matchFound) {
             project.style.display = 'block';
-        } else if (matchFound && screenWidth > 768) {
-            project.style.display = 'flex';
-        }  else {
-            project.style.display = 'none';
-        } 
-    });
-
-    separateProjects();
-
-        if (searchText === "") {
-            location.reload();
-        }
-}
-
-// Separate projects function
-function separateProjects(matchFound) {
-    const delineatingLines = document.querySelectorAll('.separate-projects');
-
-    delineatingLines.forEach(hr => {
-        if(matchFound) {
-            hr.style.display = 'none';
-        } else if (!matchFound) {
-            hr.style.display = 'none';
         } else {
-            hr.style.display = 'block';
+            project.style.display = 'none';
         }
-      });
+    });
 }
 
 // EVENT LISTENERS
