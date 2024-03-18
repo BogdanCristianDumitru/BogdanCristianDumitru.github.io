@@ -226,10 +226,10 @@ header {
 
 /* PROJECTS SECTION */
 .project-container {
-    padding-inline: 1rem;
-    line-height: 1.8;
     display: flex;
     flex-direction: column;
+    padding-inline: 1rem;
+    line-height: 1.8;
 }
 
 .project-container .body-text {
