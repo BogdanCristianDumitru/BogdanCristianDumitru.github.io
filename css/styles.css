@@ -243,6 +243,7 @@ header {
 .project-container img {
     width: 265px;
     height: 265px;
+    margin-bottom: 1rem;
 }
 
 .all-projects-container h3 {
