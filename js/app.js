@@ -38,7 +38,6 @@ mobileLinks.forEach(link => {
 // Search function 
 function searchProject() {
     const searchText = searchInput.value.toLowerCase();
-    const screenWidth = window.innerWidth;
 
     projectContainers.forEach(project => {
         const techStacks = project.querySelectorAll('.project-techs span');
