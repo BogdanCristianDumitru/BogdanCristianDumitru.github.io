@@ -160,11 +160,6 @@ header {
     transition: transform .5s ease;
 }
 
-.hero-img:hover {
-    transform: rotate(5deg) scale(1.1);
-    cursor: pointer;
-}
-
 .hero-text-container h1 {
     margin-bottom: 1rem;
     font-size: 2rem;
